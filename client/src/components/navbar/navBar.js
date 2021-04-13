@@ -16,34 +16,49 @@ const NavBar = () => {
   if(width<=1000)  {setmaxWidth(1);}
   else             {setmaxWidth(0);}
 
-  }, [])
+  }, []);
 
   
   return (
     <div>
-      <div className='navbarSmall'>
-        <Menu onClick={()=>{if(press){setpress(0);} else {setpress(1);}}}/>
-      <a className='btn2Small'>KRETZ</a>
-      </div>
-      <div className='navbar'>
-        {(press || maxWidth==1) ?
-        <div className='box'>
-          <Button className='btn'>ACHETER</Button>
-          <Button className='btn'>VENDRE</Button>
-          <Button className='btn'>LOUER</Button>
-          <Button className='btn'>L'AGENCE</Button>
-        </div> : <div></div> }
-        {maxWidth==0?
+      {maxWidth==0?
+        <div className='navbar'>
+          <div className='box'>
+            <Button className='btn'>ACHETER</Button>
+            <Button className='btn'>VENDRE</Button>
+            <Button className='btn'>LOUER</Button>
+            <Button className='btn'>L'AGENCE</Button>
+          </div>
           <div className='box2'>
-            <a className='btn2'>KRETZ</a>
-          <div>FAMILY REAL ESTATE</div>
-        </div>:''}
-        {(press && maxWidth==1) ?
-        <div className='box3'>
-          <TextField id="standard-basic" label="Creer une alerte" className="btn3" />
-          <TextField id="standard-basic" label="REFERENCE" className="btn3" />
-        </div>: <div></div> }
-      </div>
+             <a className='btn2'>KRETZ</a>
+             <div>FAMILY REAL ESTATE</div>
+          </div>
+          <div className='box3'>
+             <TextField id="standard-basic" label="Creer une alerte" className="btn3" />
+             <TextField id="standard-basic" label="REFERENCE" className="btn3" />
+          </div>
+        </div>: 
+        <div>
+            <div className='navbarSmall'>
+                 <Menu onClick={()=>{if(press){setpress(0);} else {setpress(1);}}}/>
+                 <a className='btn2Small'>KRETZ</a>
+              {(press) ?
+              <div>
+                  <div className='box'>
+                      <Button className='btn'>ACHETER</Button>
+                      <Button className='btn'>VENDRE</Button>
+                      <Button className='btn'>LOUER</Button>
+                      <Button className='btn'>L'AGENCE</Button>
+                  </div>
+                  <div className='box3'>
+                      <TextField id="standard-basic" label="Creer une alerte" className="btn3" />
+                      <TextField id="standard-basic" label="REFERENCE" className="btn3" />
+                  </div>
+              </div>:<div></div>
+              }
+            </div>
+        </div>
+        }
     </div>
   );
 }
@@ -51,20 +66,24 @@ const NavBar = () => {
 export default NavBar;
 
 
-// <AppBar position="static">
-// <Toolbar>
-//   <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-//     <MenuIcon />
-//   </IconButton>
-//   <Typography variant="h6" className={classes.title}>
-//     KRETZ
-//   </Typography>
-//   <Button color="inherit">ACHETER</Button>
-//   <Button color="inherit">VENDRE</Button>
-//   <Button color="inherit">LOUER</Button>
-//   <Button color="inherit">L'AGENCE</Button>
-//   <Button color="inherit">KRETZ</Button>
-//   <TextField id="standard-basic" label="Creer une alerte" />
-//   <TextField id="standard-basic" label="REFERENCE" />
-// </Toolbar>
-// </AppBar>
+
+      
+// <div>
+//               <div className='navbarSmall'>
+//                 <Menu onClick={()=>{if(press){setpress(0);} else {setpress(1);}}}/>
+//                 <a className='btn2Small'>KRETZ</a>
+//               </div>
+//               {(press || maxWidth==1) ?
+//                 <div>
+//                       <div className='box'>
+//                           <Button className='btn'>ACHETER</Button>
+//                           <Button className='btn'>VENDRE</Button>
+//                           <Button className='btn'>LOUER</Button>
+//                           <Button className='btn'>L'AGENCE</Button>
+//                       </div>
+//                       <div className='box3'>
+//                           <TextField id="standard-basic" label="Creer une alerte" className="btn3" />
+//                           <TextField id="standard-basic" label="REFERENCE" className="btn3" />
+//                       </div>
+//                 <div> : <div></div> }
+//           </div>
