@@ -1,0 +1,20 @@
+.centerContainer{
+    position: relative;
+     text-align: center;
+     margin: 5%;
+ }
+ .fontTitle{
+    font-size: 150%;
+    font-weight: bold;
+    margin: 2%;
+  }
+  .fontBold{
+    font-size: 300%;
+  }
+  .fontSmall{
+    font-size: 150%;
+  }
+  .smallGap{
+    height: 20px;
+  }
+  
