@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-image: url('./images/image1.jpg');
+  background-color: #cccccc;
 }
 
 .App-logo {
@@ -36,3 +38,14 @@
     transform: rotate(360deg);
   }
 }
+
+.body {
+  background-image: url('./images/image2.JPG');
+  /* Full height */
+  height: 600px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }

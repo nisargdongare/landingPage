@@ -1,0 +1,40 @@
+
+.navbar {
+    list-style-type: none;
+    background-color: rgb(175, 172, 172);
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.box {
+    width: 50%;
+    list-style-type: none;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.box2 {
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.btn{
+    padding: 2%;
+    align-items: center;
+ 
+}
+.btn2{
+    color: black;
+    font-size: 400%;
+    padding: 4%;
+    align-items: center;
+}
